@@ -5,12 +5,12 @@ import base64
 import urllib.parse
 import json
 
-region = 'ap-northeast-1'
+region = 'us-east-2'
 service = 'es'
 credentials = boto3.Session().get_credentials()
 awsauth = AWS4Auth(credentials.access_key, credentials.secret_key, region, service, session_token=credentials.token)
-host = 'https://search-mygoogle-74xgfxo3qbqg4mmm5zzt3a3uye.ap-northeast-1.es.amazonaws.com'
-index = 'mygoogle'
+host = 'https://vpc-esanchez-pdf-search-emc4vzj346b5qprnorcvwft2qe.us-east-2.es.amazonaws.com' 
+index = 'search_engine'
 url = host + '/' + index + '/_search'
 def get_from_Search(query):
     
